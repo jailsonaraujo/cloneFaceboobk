@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react'
+import Formulario from './componentes/Form'
+import Informacoes from './componentes/Informacoes'
+import Cadastro from './componentes/Cadastro'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export default function App(){
+  const [mostrarCad, setMostrarCad]=useState(false)
+  return(
+    <div className="container">
+      <section className="container-section">
+        <Informacoes/>
+        <Formulario
+          mostrarCad={mostrarCad}
+          setMostrarCad={setMostrarCad}
+        />
+      </section>
+      {mostrarCad?<Cadastro/>:<div/>}
     </div>
-  );
+  )
 }
-
-export default App;

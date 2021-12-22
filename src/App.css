@@ -1,38 +1,209 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*  */
+.container{
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f2f5;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+}
+.container-section{
+  width: 980px;
+  height: auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*  */
+.div-formulario{
+  width: 40%;
+  height: auto;
+  padding: 1rem 0 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  border-radius: 9px;
+}
+.formulario{
+  display: flex;
+  flex-direction: column;
+  width: 93%;
+  align-items: center;
+}
+.formulario input[type='text'], input[type='password']{
+  padding: .8rem 1rem .8rem 1rem;
+  font-size: 17px;
+  margin: .5rem 0 .5rem 0 ;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 90%;
+  border-radius: 6px;
+  border: solid 1px #dddfe2;
+}
+.formulario button[type='submit']{
+  width: 100%;
+  padding: .8rem 0 .8rem 0;
+  font-size: 1.3rem;
+  background-color: #1877f2;
+  color: #fff;
+  margin: .5rem 0 0 0;
+  border: none;
+  border-radius: 6px;
+}
+.esqueceu-senha{
+  text-decoration: none;
+  margin: 1.4rem 0 1.4rem 0;
+  text-align: center;
+}
+.linha{
+  width: 100%;
+  border: solid 1px #dadde1;
+  margin: 0 0 1.4rem 0;
+}
+.novaConta{
+  text-align: center;
+  width: 50%;
+  background-color: #42b72a;
+  padding: .6rem 0 .6rem 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 17px;
 }
 
-.App-link {
-  color: #61dafb;
+/*  */
+.div-informacoes{
+  width: 55%;
+  height: auto;
+}
+.div-informacoes img{
+  width: 320px;
+  margin:-28px;
+}
+.div-informacoes h2{
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: left;
+  width: 500px;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 32px;
+  color: #1c1e21;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* section-cadastro */
+.section-cadastro{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.74);
+  position: absolute;
+}
+.container-form-cadastro{
+  width: 35%;
+  height: auto;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1.2rem 1rem 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+.titulo-formulario{
+  width: 100%;
+  height: auto;
+  padding: .3rem 0 1rem 0;
+  border-bottom: solid 1px #dadde1;
+  margin-bottom: .6rem;
+}
+.container-form-cadastro form{
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.grupo-inputs1{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.grupo-inputs1 input{
+  width: 48%;
+  height: 2.4rem;
+  margin: .4rem 0 .4rem 0;
+  border: solid 1.6px #dadde1;
+  background-color: #f5f6f7;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.grupo-inputs2{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.grupo-inputs2 input{
+  width: 100%;
+  height: 2.4rem;
+  margin: .4rem 0 .4rem 0;
+  border: solid 1.6px #dadde1;
+  background-color: #f5f6f7;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.nascimento{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.nascimento label{
+  width: 100%;
+  height: auto;
+  font-size: 13px;
+  color: #606770;
+}
+.nascimento select{
+  width: 30%;
+  height: auto;
+  padding: .5rem;
+  font-size: 15px;
+  border: solid 1.6px #dadde1;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.botao-cadastro{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem 0 .5rem 0;
+}
+.botao-cadastro button{
+  width: 50%;
+  height: auto;
+  background-color: #00a400;
+  color: #fff;
+  padding: 0.5rem 0 0.5rem 0;
+  border-radius: 6px;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
 }
