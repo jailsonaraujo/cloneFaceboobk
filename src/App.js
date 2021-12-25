@@ -15,7 +15,12 @@ export default function App(){
           setMostrarCad={setMostrarCad}
         />
       </section>
-      {mostrarCad?<Cadastro/>:<div/>}
+      {mostrarCad?
+        <Cadastro 
+          mostrarCad={mostrarCad}
+          setMostrarCad={setMostrarCad}
+        />
+      :<div/>}
     </div>
   )
 }
