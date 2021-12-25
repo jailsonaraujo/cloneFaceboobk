@@ -11,6 +11,8 @@ export default function Form(props){
         <div className='linha'></div>
         <a href="#" className='novaConta' onClick={()=>props.setMostrarCad(!props.mostrarCad)}>Criar nova conta</a>
       </form>
+
+      <p><b>Criar uma Página</b> para uma celebridade, uma marca ou uma empresa.</p>
     </div>
   )
 }

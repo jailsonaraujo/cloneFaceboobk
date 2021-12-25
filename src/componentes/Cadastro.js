@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 //import '../App.css'
 
 export default function Cadastro(){
@@ -25,11 +25,29 @@ export default function Cadastro(){
     (a)=>
       <option>{a}</option>
   )
+  const radioChecked=()=>{
+    var btnPersonalizado=document.querySelectorAll('input[type="radio"]')
+    for(let i=0; i<btnPersonalizado.length; i++){
+      if(btnPersonalizado[2].checked){
+        document.getElementById('per').style.display='block'
+      }else if(btnPersonalizado[0].checked){
+        document.getElementById('per').style.display='none'
+      }else if(btnPersonalizado[1].checked){
+        document.getElementById('per').style.display='none'
+      }
+    }
+  }
   return(
     <section className='section-cadastro'>
       <div className='container-form-cadastro'>
         <div className='titulo-formulario'>
-        <h1>Cadastre-se</h1>
+        <h1>Cadastre-se
+          <div className='div-botao'>
+            <span id='span1'></span>
+            <span id='span2'></span>
+          </div>
+        </h1>
+        
         <p>É rápido e fácil.</p>
         </div>
         <form>
@@ -52,6 +70,33 @@ export default function Cadastro(){
               <select>
                 {manoNascimento}
               </select>
+          </div>
+          <div className='genero'>
+            <label>Gênero</label>
+            <div>
+              Feminino<input type="radio" value="feminino" name="genero"
+              onClick={()=>radioChecked()}/>
+            </div>
+            <div>
+              Masculino<input type="radio" value="masculino" name="genero"
+              onClick={()=>radioChecked()}/>
+            </div>
+            <div id="inputRadio3">
+              Personalizado<input type="radio" value="personalizado" name="genero" id="btnPersonalizado" 
+              onClick={()=>radioChecked()}/>
+            </div>
+          </div>
+          <div className='personalizacao' id='per'>
+            <select value='Selecione seu pronome'>
+              <option disabled="1">Selecione seu pronome</option>
+            </select>
+            <p>Seu pronome fica visível para todos.</p>
+            <input type="text" name="generoOpicional" placeholder="Gênero(opcional)"/>
+          </div>
+          <div className='termo-cadastro'>
+            <p>Ao clicar em <a href="#">Cadastre-se</a>, você concorda com nossos <a href="#">Termos</a>, <a href="#">Política de
+               Dados</a> e Política de Cookies. Você poderá receber notificações por SMS e
+               cancelar isso quando quiser.</p>
           </div>
           <div className='botao-cadastro'>
             <button>Cadastre-se</button>
