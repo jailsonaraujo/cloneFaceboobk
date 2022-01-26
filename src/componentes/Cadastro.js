@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Fechar from './img/btnFechar.png'
 //import '../App.css'
 
